@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" CONTENT="0">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    
     <title>Google Sheets Embed</title>
     <style>
         /* Reset margin and padding */
@@ -40,9 +44,7 @@
         }
 
         /* Container styling */
-        .iframe-container {
-            width: 330px;   /* Container width */
-            height: 450px;  /* Set fixed height */
+        .excel-container {
             background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
             border-radius: 15px;  /* Rounded corners */
             border: 5px solid #A0522D; /* Dark brown border color */
@@ -55,10 +57,9 @@
             z-index: 1; /* Above the background */
         }
 
-        /* Container styling */
         .iframe-container-2 {
-            width: 100;   /* Container width */
-            height: 450px;  /* Set fixed height */
+            width: 40%;   /* Container width */
+            height: 100%;  /* Set fixed height */
             background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
             border-radius: 15px;  /* Rounded corners */
             border: 5px solid #A0522D; /* Dark brown border color */
@@ -69,6 +70,19 @@
             justify-content: center; /* Center iframe horizontally */
             position: relative; /* Position relative for z-index */
             z-index: 1; /* Above the background */
+        }
+
+        .headers {
+            width: 600px;   /* Container width */
+            height: 100px;  /* Set fixed height */
+            background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
+            border: 2px solid #480348; /* Dark brown border color */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
+            margin: 0px 0;  /* Add margin between divs */
+            display: flex;
+            align-items: center; /* Center iframe vertically */
+            justify-content: center; /* Center iframe horizontally */
+            position: relative; /* Position relative for z-index */
         }
 
         /* Iframe styling */
@@ -80,12 +94,21 @@
     </style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml#"></iframe>
+
+    <div class="headers">
+        <h1>White Wolf Triathlon Scoreboard</h1>
     </div>
 
+    <div class="excel-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml#" style="height: 450px; width: 315px;"></iframe>
+    </div>
+
+    <div class="headers">
+        <h1>Gwent Tournament Bracket</h1>
+    </div>
+    
     <div class="iframe-container-2">
-        <iframe src="https://brackethq.com/b/9qmac/embed/"></iframe>
+        <iframe src="https://brackethq.com/b/9qmac/embed/" width="100%" height="550" frameborder="0"></iframe>
     </div>
 
 </body>
