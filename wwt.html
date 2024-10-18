@@ -19,6 +19,22 @@
             display: flex;
             align-items: center;  /* Center vertically */
             justify-content: center;  /* Center horizontally */
+            background-image: url('https://bla.com/image.a'); /* Background image */
+            background-size: cover; /* Make background cover full area */
+            background-position: center; /* Center the background image */
+        }
+
+        /* Container styling */
+        .iframe-container {
+            width: 90%;   /* Container width (adjust as needed) */
+            max-width: 1200px;  /* Max width of the container */
+            height: 90%;  /* Container height */
+            background-color: rgba(30, 30, 30, 0.8); /* Dark background with some transparency */
+            border-radius: 10px;  /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for a nice effect */
+            display: flex;
+            align-items: center; /* Center iframe vertically */
+            justify-content: center; /* Center iframe horizontally */
         }
 
         /* Iframe styling */
@@ -30,6 +46,8 @@
     </style>
 </head>
 <body>
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
 </body>
 </html>
