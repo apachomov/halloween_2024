@@ -22,6 +22,7 @@
             background-image: url('https://bla.com/image.a'); /* Background image */
             background-size: cover; /* Make background cover full area */
             background-position: center; /* Center the background image */
+            color: #fff; /* White text color */
         }
 
         /* Container styling */
@@ -29,12 +30,15 @@
             width: 90%;   /* Container width (adjust as needed) */
             max-width: 1200px;  /* Max width of the container */
             height: 90%;  /* Container height */
-            background-color: rgba(30, 30, 30, 0.8); /* Dark background with some transparency */
-            border-radius: 10px;  /* Rounded corners */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for a nice effect */
+            background: rgba(50, 50, 50, 0.9); /* Dark background with some transparency */
+            border-radius: 15px;  /* Rounded corners */
+            border: 5px solid #4CAF50; /* Fancy border color */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
             display: flex;
             align-items: center; /* Center iframe vertically */
             justify-content: center; /* Center iframe horizontally */
+            overflow: hidden; /* Hide overflow */
+            position: relative; /* Position for pseudo-elements */
         }
 
         /* Iframe styling */
@@ -42,6 +46,19 @@
             width: 100%;   /* Full width */
             height: 100%;  /* Full height */
             border: none;  /* No border */
+        }
+
+        /* Fancy border effect */
+        .iframe-container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, rgba(76, 175, 80, 0.8), rgba(255, 255, 255, 0.2)); /* Gradient border effect */
+            border-radius: 15px; /* Match container border radius */
+            z-index: -1; /* Place it behind the container */
         }
     </style>
 </head>
