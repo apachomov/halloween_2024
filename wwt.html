@@ -1,1 +1,51 @@
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Fullscreen Embed</title>
+  <style>
+    /* Remove margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set the body to take up full viewport */
+    body, html {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1e1e1e; /* Dark background */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the iframe */
+    iframe {
+      width: 100vw;   /* Full width */
+      height: 100vh;  /* Full height */
+      border: none;   /* Remove borders */
+    }
+
+    /* Optional: Add a subtle shadow and border to the iframe */
+    iframe {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      border: 3px solid #444;
+    }
+
+    /* Media query to ensure responsiveness on small screens */
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+</body>
+</html>
