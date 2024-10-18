@@ -3,49 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Sheets Fullscreen Embed</title>
+  <title>Google Sheets Embed with Custom Style</title>
   <style>
-    /* Remove margins and paddings */
+    /* Reset margins and padding */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Set the body to take up full viewport */
+    /* Set the background image */
     body, html {
       height: 100%;
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #1e1e1e; /* Dark background */
+      background: url('https://bla.com/image.a') no-repeat center center fixed; /* Background image */
+      background-size: cover; /* Make sure the background covers the full page */
       font-family: Arial, sans-serif;
     }
 
-    /* Style the iframe */
-    iframe {
-      width: 100vw;   /* Full width */
-      height: 100vh;  /* Full height */
-      border: none;   /* Remove borders */
+    /* Style the iframe container */
+    .iframe-container {
+      width: 90%;     /* Width of the iframe container */
+      max-width: 1200px;  /* Maximum width */
+      height: 90%;    /* Height of the iframe container */
+      max-height: 800px;  /* Maximum height */
+      padding: 15px;  /* Padding for the silver frame */
+      background-color: #C0C0C0; /* Silver-like frame */
+      border-radius: 15px; /* Rounded corners */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow around the frame */
     }
 
-    /* Optional: Add a subtle shadow and border to the iframe */
+    /* Style the iframe itself */
     iframe {
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-      border: 3px solid #444;
+      width: 100%;
+      height: 100%;
+      border: none;  /* Remove default border */
+      border-radius: 10px; /* Rounded corners for iframe */
     }
 
-    /* Media query to ensure responsiveness on small screens */
+    /* Ensure responsiveness for smaller screens */
     @media (max-width: 768px) {
-      iframe {
+      .iframe-container {
         width: 100%;
         height: 100%;
+        padding: 10px; /* Smaller padding on small screens */
       }
     }
   </style>
 </head>
 <body>
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+  <div class="iframe-container">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+  </div>
+
 </body>
 </html>
