@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Expires" CONTENT="0">
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    
+    <title>Google Sheets Embed</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-height and width for the body and html */
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;  /* Stack divs vertically */
+            align-items: center;  /* Center horizontally */
+            justify-content: flex-start;  /* Align to top */
+            position: relative; /* Position relative for overlay */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        /* Background image */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://wallpapers.com/images/hd/the-witcher-3-wild-hunt-game-wallpaper-all-hd-wallpaper-dxuajqqs6d1v6cqm.jpg');
+            background-size: cover; /* Cover entire background */
+            background-position: center; /* Center the image */
+            opacity: 0.7; /* Dark overlay */
+            z-index: 0; /* Behind other content */
+        }
+
+        /* Container styling */
+        .iframe-container {
+            width: 330px;   /* Container width */
+            height: 750px;  /* Set fixed height */
+            background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
+            border-radius: 15px;  /* Rounded corners */
+            border: 5px solid #A0522D; /* Dark brown border color */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
+            margin: 20px 0;  /* Add margin between divs */
+            display: flex;
+            align-items: center; /* Center iframe vertically */
+            justify-content: center; /* Center iframe horizontally */
+            position: relative; /* Position relative for z-index */
+            z-index: 1; /* Above the background */
+        }
+
+        /* Container styling */
+        .iframe-container-2 {
+            width: 600px;   /* Container width */
+            height: 100%;  /* Set fixed height */
+            background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
+            border-radius: 15px;  /* Rounded corners */
+            border: 5px solid #A0522D; /* Dark brown border color */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
+            margin: 20px 0;  /* Add margin between divs */
+            display: flex;
+            align-items: center; /* Center iframe vertically */
+            justify-content: center; /* Center iframe horizontally */
+            position: relative; /* Position relative for z-index */
+            z-index: 1; /* Above the background */
+        }
+
+        .headers {
+            width: 300px;   /* Container width */
+            height: 100%;  /* Set fixed height */
+            background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
+            border: 2px solid #480348; /* Dark brown border color */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
+            margin: 0px 0;  /* Add margin between divs */
+            display: flex;
+            align-items: center; /* Center iframe vertically */
+            justify-content: center; /* Center iframe horizontally */
+            position: relative; /* Position relative for z-index */
+        }
+
+        /* Iframe styling */
+        iframe {
+            width: 100%;   /* Full width */
+            height: 100%;  /* Full height */
+            border: none;  /* No border */
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml#"></iframe>
+    </div>
+
+    <div class="headers">
+        <h1>Gwent Tournament Bracket</h1>
+    </div>
+    <div class="iframe-container-2">
+        <iframe src="https://brackethq.com/b/9qmac/embed/"></iframe>
+    </div>
+
+</body>
+</html>
