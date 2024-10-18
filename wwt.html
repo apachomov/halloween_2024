@@ -17,8 +17,9 @@
             height: 100%;
             width: 100%;
             display: flex;
-            align-items: center;  /* Center vertically */
-            justify-content: center;  /* Center horizontally */
+            flex-direction: column;  /* Stack divs vertically */
+            align-items: center;  /* Center horizontally */
+            justify-content: flex-start;  /* Align to top */
             position: relative; /* Position relative for overlay */
             overflow: hidden; /* Hide overflow */
         }
@@ -40,13 +41,29 @@
 
         /* Container styling */
         .iframe-container {
-            width: 60%;   /* Container width (adjust as needed) */
-            max-width: 1200px;  /* Max width of the container */
-            height: 90%;  /* Container height */
+            width: 330px;   /* Container width */
+            height: 450px;  /* Set fixed height */
             background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
             border-radius: 15px;  /* Rounded corners */
             border: 5px solid #A0522D; /* Dark brown border color */
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
+            margin: 20px 0;  /* Add margin between divs */
+            display: flex;
+            align-items: center; /* Center iframe vertically */
+            justify-content: center; /* Center iframe horizontally */
+            position: relative; /* Position relative for z-index */
+            z-index: 1; /* Above the background */
+        }
+
+        /* Container styling */
+        .iframe-container-2 {
+            width: 100;   /* Container width */
+            height: 450px;  /* Set fixed height */
+            background: rgba(34, 34, 34, 0.9); /* Darker background for the container */
+            border-radius: 15px;  /* Rounded corners */
+            border: 5px solid #A0522D; /* Dark brown border color */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8); /* Shadow for a nice effect */
+            margin: 20px 0;  /* Add margin between divs */
             display: flex;
             align-items: center; /* Center iframe vertically */
             justify-content: center; /* Center iframe horizontally */
@@ -64,7 +81,12 @@
 </head>
 <body>
     <div class="iframe-container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false""></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml#"></iframe>
     </div>
+
+    <div class="iframe-container-2">
+        <iframe src="https://brackethq.com/b/9qmac/embed/"></iframe>
+    </div>
+
 </body>
 </html>
