@@ -1,62 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Sheets Embed with Custom Style</title>
-  <style>
-    /* Reset margins and padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Embed</title>
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Set the background image */
-    body, html {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: url('https://bla.com/image.a') no-repeat center center fixed; /* Background image */
-      background-size: cover; /* Make sure the background covers the full page */
-      font-family: Arial, sans-serif;
-    }
+        /* Full-height and width for the body and html */
+        html, body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;  /* Center vertically */
+            justify-content: center;  /* Center horizontally */
+            background-color: #1c1c1c; /* Dark background color */
+        }
 
-    /* Style the iframe container */
-    .iframe-container {
-      width: 100%;   /* Full width of the viewport */
-      height: 90%;   /* Height of the iframe container */
-      padding: 15px;  /* Padding for the silver frame */
-      background-color: #C0C0C0; /* Silver-like frame */
-      border-radius: 15px; /* Rounded corners */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow around the frame */
-      max-width: 1200px; /* Optional: Set a maximum width for larger screens */
-    }
+        /* Iframe styling */
+        iframe {
+            width: 100%;   /* Full width of the viewport */
+            height: 100%;  /* Full height of the viewport */
+            border: none;  /* No border */
+        }
 
-    /* Style the iframe itself */
-    iframe {
-      width: 100%;    /* Full width of the container */
-      height: 100%;   /* Full height of the container */
-      border: none;   /* Remove default border */
-      border-radius: 10px; /* Rounded corners for iframe */
-    }
-
-    /* Ensure responsiveness for smaller screens */
-    @media (max-width: 768px) {
-      .iframe-container {
-        width: 100%;
-        height: 100%;
-        padding: 10px; /* Smaller padding on small screens */
-      }
-    }
-  </style>
+        /* Iframe container styling for a bit of padding */
+        .iframe-container {
+            width: 100%;
+            height: 100%;
+            padding: 20px; /* Add some padding for aesthetics */
+            background-color: #C0C0C0; /* Silver-like frame */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow around the frame */
+            max-width: 1200px; /* Optional: Set a maximum width */
+            overflow: hidden; /* Hide overflow */
+        }
+    </style>
 </head>
 <body>
-
-  <div class="iframe-container">
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-  </div>
-
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzuoVTzdWSYiVUBBj1wuR-juKu5GEF3B_ke0-wp9DG23sxI_R1g6IIBnYaA-CzOyxZysfTmhmfzS4/pubhtml?gid=423689294&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
 </body>
 </html>
